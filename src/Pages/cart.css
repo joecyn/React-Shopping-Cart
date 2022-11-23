@@ -1,0 +1,23 @@
+.carditem{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 20px;
+}
+.quantity{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.button{
+    display: flex;
+    height: 30px;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.Add{
+    margin-right: 10px;
+}
+.Sub{
+    margin-left: 10px;
+}

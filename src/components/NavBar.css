@@ -1,0 +1,26 @@
+.Nav{
+    height: 50px;
+    background-color: blue;
+    
+    justify-items: center;
+   
+}
+.Nav ul{
+    display:flex;
+    justify-content: space-between;
+    
+   
+}
+.Nav-items {
+    display:flex;
+    justify-items:center;
+   
+}
+.Nav-items li{
+    margin-right:20px;
+    list-style:none;
+}
+.Nav-items a{
+    text-decoration: none;
+    color:white;
+}
