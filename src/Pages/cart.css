@@ -3,6 +3,10 @@
     grid-template-columns: 1fr 1fr 1fr;
     margin-top: 20px;
 }
+.carditem img{
+    width:100px;
+    height:100px;
+}
 .quantity{
     display: flex;
     justify-content: space-around;
@@ -20,4 +24,14 @@
 }
 .Sub{
     margin-left: 10px;
+}
+
+.total{
+    text-align: center;
+
+}
+.cart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
 }

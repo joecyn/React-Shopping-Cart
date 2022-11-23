@@ -21,17 +21,22 @@ const Homepage = () => {
   //console.log(Globalstate);
   return (
     
-    <Card className="Prod">
+    <Card  >
+      <div className="Prod">
       {products.map((product, index) => {
         product.quantity = 1;
         return (
-          <Card.Body key={index}>
+          <Card.Body className="card" key={index}>
            <Card.Img variant="top" src={product.image} />
             
             <Card.Text>
-            {product.title}
+            {product.title.length > 20 ? (
+              <p>{product.title.slice(0,10)}...</p>
+            ):(
+              <p>{product.title}</p>
+            )}
             </Card.Text>
-            <h3>$. {product.price}</h3>
+            <h6>$. {product.price}</h6>
             <Button onClick={() => dispatch({ type: "ADD", payload: product })}>
               add to cart
             </Button>
@@ -39,7 +44,9 @@ const Homepage = () => {
           </Card.Body>
         );
       })}
+      </div>
     </Card>
+    
     
   );
 };

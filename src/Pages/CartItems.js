@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Cartcontext } from "../context/cartContext";
 import Button from 'react-bootstrap/Button';
+import { Link  } from 'react-router-dom'
 import "./cart.css";
 
 const Cart = () => {
@@ -51,11 +52,16 @@ const Cart = () => {
       })}
       {state.length > 0 ?(
         <div className="total">
-          <h2>{total}</h2>
+          <h3>TOTAL PRICE $:{total.toFixed(2)}</h3>
         </div>
       ):(
-        <div>
-          <h1>NO ITEMS IN THE CART. PLEASE ADD ITEMS</h1>
+        <div className="cart">
+          <i class="fa fa-shopping-cart fa-5x" aria-hidden="true"></i>
+
+          <p>Your cart is empty!</p>
+          <Link to="/"  >
+          <Button variant="primary"  >START SHOPPING</Button>{' '}
+          </Link>
         </div>
       )}
     </div>
