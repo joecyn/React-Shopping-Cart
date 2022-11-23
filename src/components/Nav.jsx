@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Navbar from 'react-bootstrap/Navbar';
 import React ,{useContext}from 'react';
 import { Cartcontext } from '../context/cartContext';
+import "./NavBar.css"
 function Bar() {
     const Globalstate = useContext(Cartcontext);
     const state = Globalstate.state;
@@ -16,9 +17,12 @@ function Bar() {
           <Nav className="me-auto">
          
             
-            <Nav.Link as={Link} to="/" >Home</Nav.Link>
-            <Nav.Link as={Link} to="/Cart" >Cart {state.length}</Nav.Link>
-            
+            <Nav.Link as={Link} to="/" >HOME</Nav.Link>
+            <Nav.Link as={Link} to="/Cart"  className="navCart" >
+             <i class="fa fa-shopping-cart fa-lg" aria-hidden="true" ></i>
+              <span className='cart-icon'>{state.length}</span> 
+            </Nav.Link>
+          
           </Nav>
         </Container>
       </Navbar>
