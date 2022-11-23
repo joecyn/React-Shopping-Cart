@@ -8,7 +8,7 @@ import { Cartcontext } from "../context/cartContext";
 
 const Homepage = () => {
   const [products, setProducts] = useState([]);
-  const[isLoading,setisLoading]=useState(false)
+  const[isLoading,setisLoading]=useState(true)
   const fetchData = async () => {
     const response = await axios.get("https://fakestoreapi.com/products");
     setProducts(response.data);
@@ -17,7 +17,7 @@ const Homepage = () => {
   useEffect(() => {
     
     fetchData();
-    setisLoading(true)
+    setisLoading(false)
   }, []);
   const Globalstate = useContext(Cartcontext);
   const dispatch = Globalstate.dispatch;
@@ -29,8 +29,11 @@ const Homepage = () => {
         {isLoading ?(
           
           <ul class="fa-ul">
-               <li><i class="fa-li fa fa-spinner fa-spin fa-5x"></i></li>
-          </ul>
+  
+           <li><i class="fa-li fa fa-spinner fa-spin fa-5x"></i></li>
+  
+            </ul>
+
 
 
         ):(
